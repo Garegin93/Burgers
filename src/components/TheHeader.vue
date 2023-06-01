@@ -1,55 +1,72 @@
 <template>
-    <header class="header">
-        <div class="header__info">
-            <a href="#"
-               class="header__logo header-logo">
-                <img class="header-logo__img"
-                     src="../assets/img/icons/logo.svg"
-                     alt="Logo."></a>
-            <div class="header__content">
-                <div class="header__text header-text">
-                    <h1 class="header-text__title">Только самые <span>сочные бургеры!</span></h1>
-                    <span class="header-text__description">Бесплатная доставка от 599₽</span>
-                </div>
-                <img class="header__img"
-                     src="../assets/img/images/header-burger.png"
-                     alt="Big Hamburger.">
-            </div>
+  <header class="header">
+    <div class="header__info">
+      <a href="#" class="header__logo header-logo">
+        <img
+          class="header-logo__img"
+          src="../assets/img/icons/logo.svg"
+          alt="Logo."
+      /></a>
+      <div class="header__content">
+        <div class="header__text header-text">
+          <h1 class="header-text__title">
+            Только самые <span>сочные бургеры!</span>
+          </h1>
+          <span class="header-text__description"
+            >Бесплатная доставка от 599₽</span
+          >
         </div>
-        <nav class="header__navigation header-navigation">
-            <div class="header-navigation__categories header-navigation-categories">
-                <header-navigation-item
-                        v-for="item in navigationItem"
-                        :key="item.id"
-                        :navigationItems="item"
-                ></header-navigation-item>
-            </div>
-        </nav>
-    </header>
+        <img
+          class="header__img"
+          src="../assets/img/images/header-burger.png"
+          alt="Big Hamburger."
+        />
+      </div>
+    </div>
+    <nav class="header__navigation header-navigation">
+      <div class="header-navigation__categories header-navigation-categories">
+        <button
+          class="header-navigation-categories__button"
+          v-for="(item, index) in MENU"
+          :key="index"
+          @click="sliderGoods(index)"
+        >
+          <img
+            :src="require(`../assets/img/icons/${item.src}.svg`)"
+            width="24"
+            height="24"
+            :alt="item.name"
+          />
+          <span>{{ item.name }}</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>
-import HeaderNavigationItem from "@/components/HeaderNavigationItem.vue";
+import { mapGetters } from "vuex";
+import "swiper/css";
 
 export default {
-    name: "TheHeader",
-    data() {
-        return {
-            navigationItem: {
-                burgers: {name: "Бургеры", src: "burger-icon", id: 1},
-                snakes: {name: "Закуски", src: "snack-icon", id: 2},
-                hotDog: {name: "Хот-доги", src: "hot-dog-icon", id: 3},
-                combo: {name: "Комбо", src: "combo-icon", id: 4},
-                burrito: {name: "Шаурма", src: "burrito-icon", id: 5},
-                pizza: {name: "Пицца", src: "pizza-icon", id: 6},
-                wok: {name: "Вок", src: "wok-icon", id: 7},
-                doughnut: {name: "Десерты", src: "doughnut-icon", id: 8},
-                sauce: {name: "Соусы", src: "sauces-icon", id: 9}
-            }
-        }
+  name: "TheHeader",
+  components: {},
+  computed: {
+    ...mapGetters(["MENU"]),
+  },
+  methods: {
+    sliderGoods(i) {
+      let swiperWrapper, swiperWidth;
+      (swiperWrapper = document.querySelector(".swiper-wrapper")),
+        (swiperWidth = swiperWrapper.offsetWidth);
+      swiperWrapper.style.transform = `translateX(${-i * swiperWidth}px)`;
+      swiperWrapper.style.transition = `all .5s`;
     },
-    components: {HeaderNavigationItem}
-}
+  },
+  mounted() {
+    this.sliderGoods();
+  },
+};
 </script>
 
 <style lang="scss">
@@ -181,7 +198,6 @@ export default {
 
 @include respond-to(1440px) {
   .header {
-
     &__content {
       gap: 58px;
     }
@@ -265,6 +281,41 @@ export default {
     &__categories {
       justify-content: center;
       margin-left: -50px;
+    }
+  }
+}
+
+.header-navigation-categories {
+  &__button {
+    @include flex(center, center, row);
+    border: none;
+    background: transparent;
+    padding: 3px 8px;
+    gap: 8px;
+    font-family: "Nunito-Regular", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.4s;
+
+    &:hover {
+      background: $backgroundColor;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #ff7020;
+    }
+  }
+}
+
+@include respond-to(1024px) {
+  .header-navigation-categories {
+    &__button {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 14px;
     }
   }
 }

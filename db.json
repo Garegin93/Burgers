@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "name": "burger",
+      "image": "burger-meet-bomb",
+      "title": "Мясная бомба",
+      "weight": "520г",
+      "price": "689₽",
+      "id": "meet-bomb",
+      "bread": "Пшеничная булочка",
+      "meat": "Котлета из говядины",
+      "onion": "Красный лук",
+      "salad": "Листья салата",
+      "sauce": "Соус горчичный",
+      "kilocalories": 430,
+      "quantity": 1
+    },
+    {
+      "name": "burger",
+      "image": "burger-super-cheese",
+      "title": "Супер сырный",
+      "weight": "512г",
+      "price": "550₽",
+      "id": "super-cheese",
+      "bread": "",
+      "meat": "",
+      "onion": "",
+      "salad": "",
+      "sauce": "",
+      "kilocalories": "",
+      "quantity": 1
+    },
+    {
+      "name": "burger",
+      "image": "burger-satisfying",
+      "title": "Сытный",
+      "weight": "580г",
+      "price": "639₽",
+      "id": "burger-satisfying",
+      "bread": "",
+      "meat": "",
+      "onion": "",
+      "salad": "",
+      "sauce": "",
+      "kilocalories": "",
+      "quantity": 1
+    },
+    {
+      "name": "burger",
+      "image": "burger-heavy-blow",
+      "title": "Тяжелый удар",
+      "weight": "47г",
+      "price": "480₽",
+      "id": "heavy-blow",
+      "bread": "",
+      "meat": "",
+      "onion": "",
+      "salad": "",
+      "sauce": "",
+      "kilocalories": "",
+      "quantity": 1
+    },
+    {
+      "name": "burger",
+      "image": "burger-eternal-classic",
+      "title": "Вечная классика",
+      "weight": "450г",
+      "price": "450₽",
+      "id": "eternal-classic",
+      "bread": "",
+      "meat": "",
+      "onion": "",
+      "salad": "",
+      "sauce": "",
+      "kilocalories": "",
+      "quantity": 1
+    },
+    {
+      "name": "burger",
+      "image": "burger-italian",
+      "title": "Итальянский",
+      "weight": "510г",
+      "price": "560₽",
+      "id": "burger-italian",
+      "bread": "",
+      "meat": "",
+      "onion": "",
+      "salad": "",
+      "sauce": "",
+      "kilocalories": "",
+      "quantity": 1
+    },
+    {
+      "name": "snakes",
+      "image": "snakes-chips",
+      "title": "Начос",
+      "weight": "200г",
+      "price": "250₽",
+      "id": "snakes-chips",
+      "quantity": 1
+    },
+    {
+      "name": "snakes",
+      "image": "snakes-fries",
+      "title": "Картошка фри",
+      "weight": "180г",
+      "price": "245₽",
+      "id": "snakes-fries",
+      "quantity": 1
+    },
+    {
+      "name": "snakes",
+      "image": "snakes-onion-rings",
+      "title": "Луковые кольца",
+      "weight": "160г",
+      "price": "230₽",
+      "id": "onion-rings",
+      "quantity": 1
+    },
+    {
+      "name": "hotDogs",
+      "image": "hot-dog-homemade",
+      "title": "Домашний хот-дог",
+      "weight": "250г",
+      "price": "290₽",
+      "id": "hot-dog-homemade",
+      "quantity": 1
+    },
+    {
+      "name": "hotDogs",
+      "image": "hot-dog-spicy",
+      "title": "Жгучий хот-дог",
+      "weight": "245г",
+      "price": "239₽",
+      "id": "hot-dog-spicy",
+      "quantity": 1
+    },
+    {
+      "name": "hotDogs",
+      "image": "hot-dog-classic",
+      "title": "Классический хот-дог",
+      "weight": "215г",
+      "price": "220₽",
+      "id": "hot-dog-classic",
+      "quantity": 1
+    }
+  ]
+}

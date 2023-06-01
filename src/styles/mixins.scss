@@ -28,4 +28,9 @@
       @content;
     }
   }
+  @if $media == 320px {
+    @media all and (min-width: $smallMobDev) {
+      @content;
+    }
+  }
 }

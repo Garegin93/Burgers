@@ -1,28 +1,40 @@
 <template>
-    <div class="container">
-        <TheHeader/>
-    </div>
+  <div class="container">
+    <the-header></the-header>
+    <the-main></the-main>
+    <the-footer></the-footer>
+  </div>
 </template>
 
 <script>
 import TheHeader from "@/components/TheHeader.vue";
+import TheMain from "@/components/TheMain.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 export default {
-    name: 'App',
-    components: {TheHeader}
-}
-
+  name: "App",
+  components: {
+    TheHeader,
+    TheMain,
+    TheFooter,
+  },
+};
 </script>
 
 <style lang="scss">
 @import "./styles/mixins";
 @import "./styles/vars";
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
@@ -49,7 +61,7 @@ body {
     font-weight: 400;
     font-style: normal;
     src: url("assets/fonts/Nunito-Regular.woff2") format("woff2"),
-    url("assets/fonts/Nunito-Regular.woff") format("woff");
+      url("assets/fonts/Nunito-Regular.woff") format("woff");
   }
 }
 </style>
